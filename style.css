@@ -1,0 +1,9 @@
+.card{
+	width: 350px;
+	margin: auto;
+	margin-top: 10%;
+	text-align: center;
+}
+.img{
+	 background: url(img/sklep.png);
+}
