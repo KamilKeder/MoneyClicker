@@ -1,128 +1,264 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Clicker</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
-	<div class="card">
-		<div class="card-header">
-			Money Clicker
-		</div>
-	<div class="card-body">
-		Gotówka:<div id="div_money">0</div>
-<button id="pieniadz" class="btn btn-success mt-2 mb-2">Zarabiaj</button>
-<h4>Inwestycje</h4>
-<div class="row">
-	<div class="col">
-Praca
-<img src="img/placeholder.png" id="pracaimg" style="width: 50px; height: 50px;" >
-<h5>+<span id="praca_wartosc">1</span></h5>
-<button class="btn btn-warning" id="ulepsz_praca">Ulepsz</button>
-<button class="btn btn-secondary mt-2 pt-0 pb-0" data-bs-toggle="modal" data-bs-target="#info1">Info</button>
-	</div>
-	<div class="col">
-Sklep
-<img src="img/placeholder.png" id="sklepimg" style="width: 50px; height: 50px;" >
-<h5>+<span id="sklep_wartosc">0</span></h5>
-<button class="btn btn-warning" id="ulepsz_sklep">Ulepsz</button>
-<button class="btn btn-secondary mt-2 pt-0 pb-0" data-bs-toggle="modal" data-bs-target="#info2">Info</button>
-	</div>
-	<div class="col">
-Firma
-<img src="img/placeholder.png" id="firmaimg" style="width: 50px; height: 50px;" >
-<h5>+<span id="firma_wartosc">0</span></h5>
-<button class="btn btn-warning" id="ulepsz_firma">Ulepsz</button>
-<button class="btn btn-secondary mt-2 pt-0 pb-0" data-bs-toggle="modal" data-bs-target="#info3">Info</button>
-	</div>
-</div>
-<button id="reset" class="btn btn-danger mt-4">Reset</button>
-	</div>
-	<div class="card-footer">
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#info">Informacje o aplikacji</button>
-	</div>	
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clicker</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" sizes="76x76" href="src/moneyclicker.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="src/moneyclicker.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="src/moneyclicker.png"
+    />
+    <link rel="manifest" href="src/moneyclicker.png" />
+    <link rel="mask-icon" href="src/moneyclicker.png" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-header">Money Clicker</div>
+      <div class="card-body">
+        Gotówka:
+        <div id="div_money">0</div>
+        <button id="pieniadz" class="btn btn-success mt-2 mb-2">
+          Zarabiaj
+        </button>
+        <h4>Inwestycje</h4>
+        <div class="row">
+          <div class="col">
+            Praca
+            <img
+              src="img/placeholder.png"
+              id="pracaimg"
+              style="width: 50px; height: 50px"
+            />
+            <h5>+<span id="praca_wartosc">1</span></h5>
+            <button class="btn btn-warning" id="ulepsz_praca">Ulepsz</button>
+            <button
+              class="btn btn-secondary mt-2 pt-0 pb-0"
+              data-bs-toggle="modal"
+              data-bs-target="#info1"
+            >
+              Info
+            </button>
+          </div>
+          <div class="col">
+            Sklep
+            <img
+              src="img/placeholder.png"
+              id="sklepimg"
+              style="width: 50px; height: 50px"
+            />
+            <h5>+<span id="sklep_wartosc">0</span></h5>
+            <button class="btn btn-warning" id="ulepsz_sklep">Ulepsz</button>
+            <button
+              class="btn btn-secondary mt-2 pt-0 pb-0"
+              data-bs-toggle="modal"
+              data-bs-target="#info2"
+            >
+              Info
+            </button>
+          </div>
+          <div class="col">
+            Firma
+            <img
+              src="img/placeholder.png"
+              id="firmaimg"
+              style="width: 50px; height: 50px"
+            />
+            <h5>+<span id="firma_wartosc">0</span></h5>
+            <button class="btn btn-warning" id="ulepsz_firma">Ulepsz</button>
+            <button
+              class="btn btn-secondary mt-2 pt-0 pb-0"
+              data-bs-toggle="modal"
+              data-bs-target="#info3"
+            >
+              Info
+            </button>
+          </div>
+        </div>
+        <button id="reset" class="btn btn-danger mt-4">Reset</button>
+      </div>
+      <div class="card-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#info"
+        >
+          Informacje o aplikacji
+        </button>
+      </div>
+    </div>
 
-</div>
+    <script type="text/javascript" src="biblioteki/jquery.js"></script>
+    <div
+      class="modal fade"
+      id="info"
+      tabindex="-1"
+      aria-labelledby="infoinfo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="infoinfo">
+              Informacje o aplikacji
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-2">O aplikacji</h5>
+            Aplikacja umożliwia wygenerowanie gotówki za pomocą specjalnego
+            przycisku. Użytkownik może następnie zainwestować uzbieraną sumę w
+            ulepszenia, które przynoszą premie, takie jak większa ilość gotówki
+            za pojedyncze kliknięcie lub automatyczne naliczanie gotówki co
+            sekundę. Celem użytkownika jest zdobycie jak największej ilości
+            gotówki.
+            <h5 class="mt-2">Technologie</h5>
+            HTML, CSS, JavaScript, jQuery, Bootstrap
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Zamknij
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-<script type="text/javascript" src="biblioteki/jquery.js"></script>
-<div class="modal fade" id="info" tabindex="-1" aria-labelledby="infoinfo" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h1 class="modal-title fs-5" id="infoinfo">Informacje o aplikacji</h1>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-		  <h5 class="mb-2">O aplikacji</h5>
-			Aplikacja wyświetla przycisk który generuje gotówkę. Użytkownik uzbieraną gotówkę może zainwestować w ulepszenia które przyznają premie takie jak więcej gotówki za kliknięcie czy gotówka automatycznie naliczająca się co sekunde. Zadaniem użytkownika jest uzbieranie jak największej ilości gotówki.
-			<h5 class="mt-2">Technologie</h5>
-			HTML, CSS, JavaScript, jQuery, Bootstrap
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zamknij</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-
-
-<div class="modal fade" id="info1" tabindex="-1" aria-labelledby="infoinfo1" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h1 class="modal-title fs-5" id="infoinfo1">Informacje o Pracy</h1>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-			Każdy poziom zwiększa ilość gotówki o 1$ otrzymanej podczas klikania "Zarabiaj".
-			Koszt ulepszenia to 20$
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zamknij</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-  <div class="modal fade" id="info2" tabindex="-1" aria-labelledby="infoinfo2" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h1 class="modal-title fs-5" id="infoinfo2">Informacje o Firmie</h1>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-			Każdy poziom zwiększa ilość gotówki o 1$ otrzymanej co sekunde.
-			Koszt ulepszenia to 100$
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zamknij</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-  <div class="modal fade" id="info3" tabindex="-1" aria-labelledby="infoinfo3" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h1 class="modal-title fs-5" id="infoinfo3">Informacje o Firmie</h1>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-			Każdy poziom zwiększa ilość gotówki o 10$ otrzymanej co sekunde.
-			Koszt ulepszenia to 1000$
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zamknij</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-  <div class="img"></div>
-<script type="text/javascript" src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+    <div
+      class="modal fade"
+      id="info1"
+      tabindex="-1"
+      aria-labelledby="infoinfo1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="infoinfo1">Informacje o Pracy</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Każdy poziom zwiększa ilość gotówki o 1$, otrzymanej podczas
+            klikania "Zarabiaj". Koszt ulepszenia to 20$
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Zamknij
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="info2"
+      tabindex="-1"
+      aria-labelledby="infoinfo2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="infoinfo2">Informacje o Firmie</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Każdy poziom zwiększa ilość gotówki o 1$, otrzymanej co sekunde.
+            Koszt ulepszenia to 100$
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Zamknij
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="info3"
+      tabindex="-1"
+      aria-labelledby="infoinfo3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="infoinfo3">Informacje o Firmie</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Każdy poziom zwiększa ilość gotówki o 10$, otrzymanej co sekunde.
+            Koszt ulepszenia to 1000$
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Zamknij
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="img"></div>
+    <script type="text/javascript" src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
